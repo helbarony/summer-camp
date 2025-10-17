@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Application</title>
+    <style>
+        .form-box {
+            border: 1px solid black; 
+            padding: 1rem; 
+            width: 50%; 
+        }
+        textarea {
+            width: 80%; 
+            padding: 8px;
+        }
+        input{
+            border: 1px solid black;
+            width: 20%; 
+        }
+        button {
+            font-size:15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Application</h1>
+    <div class="form-box">
+    <form action="/processApplication" method="post">
+       <strong> Name:</strong><input type="text" id="name" name="name" >
+       <strong>Email Address:</strong><input type="text" id="email" name="email"><br><br>
+
+       <strong>GPA:</strong><input type="text" id="gpa" name="gpa"><br><br>
+       <strong>Background Information: </strong></label><br>
+       <textarea id="background" name="background" rows="4" cols="50" ></textarea><br><br>
+
+        <button type="reset">Reset</button>
+        <button type="submit">Submit Application</button>
+    </form>
+</div>
+    <hr>
+    <a href="/">HOME</a>
+</body>
+</html>
+<!-- Window alert message  -->
+<script>
+    function callback(event) {
+        const message = "Are you sure you want to submit your application?\n" +
+                "You will not be able to change your information once submitted.";    
+        if (!window.confirm(message)) {
+            event.preventDefault(); 
+            return false; // Stop 
+        }
+            return true; 
+        }
+        window.onload = function() {
+        window.onsubmit = callback;
+        };
+    </script>
+</script>

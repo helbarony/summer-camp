@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="utf-8" />
+        <title> Admin GFA</title>
+        <style>
+            input{
+                border: 1px solid black; 
+                width: 11%; 
+               
+            }
+            button {
+            margin-top: 10px; 
+            padding: 5px 10px; 
+            }
+        </style>
+        </head>
+        <body>
+            <h1> Display GFAs Greater than or Equal to</h1>
+            <form action="/processAdminGFA" method="POST">
+            <strong>GPA:</strong> <input type="text" id="gpa" name="gpa">
+            <br>
+            <button type="submit">Submit Request</button>
+            </form>
+            <hr>
+            <a href="/">HOME</a>
+
+        </body>
+        </html>

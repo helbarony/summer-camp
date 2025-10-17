@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin GFA</title>
+    <style>
+         button {
+            margin-top: 10px; 
+            padding: 5px 10px; 
+            }
+    </style>
+</head>
+
+    <body>
+        <h1>Removing All Applicants</h1>
+        <form action="/processAdminRemove" method="post">
+            <button type = "submit" onclick="confirmRemoval()">  Remove all applicants </button>
+            <hr>
+            <a href="/">HOME</a>
+    </body>
+    </html>
+    <script>
+        function callback(event) {
+            const message = "Are you sure you want to remove all applications?";
+                if (!window.confirm(message)) {
+                    event.preventDefault(); 
+                    return false; // Stop 
+                }
+                    return true; //  if OK is clicked
+                }                
+                window.onload = function() {
+                window.onsubmit = callback;
+                };
+    </script>
